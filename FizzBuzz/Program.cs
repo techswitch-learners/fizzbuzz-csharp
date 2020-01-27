@@ -11,6 +11,11 @@ namespace FizzBuzz
             {
                 var parts = GetParts(counter);
 
+                if (counter % 17 == 0)
+                {
+                    parts.Reverse();
+                }
+
                 if (parts.Count == 0)
                 {
                     Console.WriteLine(counter);
