@@ -8,7 +8,14 @@ namespace FizzBuzz
         {
             for (var counter = 1; counter <= 100; counter++)
             {
-                Console.WriteLine(counter);
+                if (counter % 3 == 0)
+                {
+                    Console.WriteLine("Fizz");
+                }
+                else
+                {
+                    Console.WriteLine(counter);
+                }
             }
         }
     }
