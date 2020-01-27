@@ -9,6 +9,12 @@ namespace FizzBuzz
         {
             for (var counter = 1; counter <= 100; counter++)
             {
+                if (counter % 11 == 0)
+                {
+                    Console.WriteLine("Bong");
+                    continue;
+                }
+                
                 var parts = new List<string>();
                 
                 if (counter % 3 == 0)
