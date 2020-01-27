@@ -9,37 +9,7 @@ namespace FizzBuzz
         {
             for (var counter = 1; counter <= 500; counter++)
             {
-                if (counter % 11 == 0)
-                {
-                    if (counter % 13 == 0)
-                    {
-                        Console.WriteLine("FezzBong");
-                    }
-                    else
-                    {
-                        Console.WriteLine("Bong");
-                    }
-                    continue;
-                }
-                
-                var parts = new List<string>();
-                
-                if (counter % 3 == 0)
-                {
-                    parts.Add("Fizz");
-                }
-                if (counter % 13 == 0)
-                {
-                    parts.Add("Fezz");
-                }
-                if (counter % 5 == 0)
-                {
-                    parts.Add("Buzz");
-                }
-                if (counter % 7 == 0)
-                {
-                    parts.Add("Bang");
-                }
+                var parts = GetParts(counter);
 
                 if (parts.Count == 0)
                 {
@@ -50,6 +20,41 @@ namespace FizzBuzz
                     Console.WriteLine(string.Join("", parts));
                 }
             }
+        }
+
+        static List<string> GetParts(int number)
+        {
+            var parts = new List<string>();
+            
+            if (number % 11 == 0)
+            {
+                if (number % 13 == 0)
+                {
+                    parts.Add("Fezz");
+                }
+                parts.Add("Bong");
+
+                return parts;
+            }
+            
+            if (number % 3 == 0)
+            {
+                parts.Add("Fizz");
+            }
+            if (number % 13 == 0)
+            {
+                parts.Add("Fezz");
+            }
+            if (number % 5 == 0)
+            {
+                parts.Add("Buzz");
+            }
+            if (number % 7 == 0)
+            {
+                parts.Add("Bang");
+            }
+
+            return parts;
         }
     }
 }
