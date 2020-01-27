@@ -19,6 +19,10 @@ namespace FizzBuzz
                 {
                     parts.Add("Buzz");
                 }
+                if (counter % 7 == 0)
+                {
+                    parts.Add("Bang");
+                }
 
                 if (parts.Count == 0)
                 {
